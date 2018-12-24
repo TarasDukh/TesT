@@ -5,11 +5,13 @@ using namespace std;
 
 
 // прототип функциї
-void bubbleSort(int arrForSort[]); 
+void bubbleSort(int arrForSort[]);
+void SumElement();
 
 void main()
 {	
 	int arr[n];
+	int SumElement = 0;
 
 	cout << "Початковий масив:\n";
 	for (int i = 0; i < n; i++)
@@ -18,6 +20,11 @@ void main()
 		cout << arr[i] << "\n__\n";
 	}
 	cout << "\n\n";
+
+
+	SumElement();
+	cout << "Сумма елементів масиву:\n";
+	cout << SumElement << endl; // вивід сумми елементів
 
 	bubbleSort(arr);  // передаємо в функцію для сортування
 
@@ -28,6 +35,14 @@ void main()
 	}
 	cout << "\n\n";
 }
+
+void SumElement() { // функція сумми елементів
+	for (int i = 0; i < n; i++)
+	{
+		SumElement = SumElement + arr[i];
+	}
+}
+
 
 void bubbleSort(int arrForSort[])
 {
